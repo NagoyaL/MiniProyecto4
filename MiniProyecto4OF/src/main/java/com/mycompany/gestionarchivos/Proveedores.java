@@ -9,6 +9,7 @@ import static com.mycompany.gestionarchivos.Almacenamiento.carnesFriasPKG;
 import static com.mycompany.gestionarchivos.Almacenamiento.frutasPKG;
 import static com.mycompany.gestionarchivos.Almacenamiento.legumbresPKG;
 import static com.mycompany.gestionarchivos.Almacenamiento.verdurasPKG;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -40,6 +41,11 @@ public class Proveedores extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,6 +104,12 @@ public class Proveedores extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(221, 221, 221)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton6))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addComponent(jButton1)
                         .addGap(28, 28, 28)
@@ -107,14 +119,20 @@ public class Proveedores extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addComponent(jButton4)
                         .addGap(34, 34, 34)
-                        .addComponent(jButton5))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(221, 221, 221)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton6)))
+                        .addComponent(jButton5)))
                 .addContainerGap(48, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +146,14 @@ public class Proveedores extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(17, 17, 17))
         );
@@ -176,23 +201,24 @@ public class Proveedores extends javax.swing.JFrame {
      */
     
     private void sumarUnArroz(){
-         arrozPKG = arrozPKG + 10;
+         arrozPKG = arrozPKG + Integer.parseInt(jTextField5.getText());
+         JOptionPane.showMessageDialog(null, "Ha añadido"  + Integer.valueOf(jTextField5.getText()) + "PKG de Arroces"  , "Compra a proveedores", 1);
      }
     
      private void sumarUnasLegumbres(){
-         legumbresPKG = legumbresPKG + 10;
+         legumbresPKG = legumbresPKG + Integer.parseInt(jTextField1.getText());
      }
      
      private void sumarUnasFrutas(){
-         frutasPKG = frutasPKG + 10;
+         frutasPKG = frutasPKG + Integer.parseInt(jTextField3.getText());
      }
      
      private void sumarUnasVerduras(){
-         verdurasPKG = verdurasPKG + 10;
+         verdurasPKG = verdurasPKG + Integer.parseInt(jTextField2.getText());
      }
      
      private void sumarUnasCarnesFrias(){
-         carnesFriasPKG = carnesFriasPKG + 10;
+         carnesFriasPKG = carnesFriasPKG + Integer.parseInt(jTextField4.getText());
      }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -235,5 +261,10 @@ public class Proveedores extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }

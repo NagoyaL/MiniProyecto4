@@ -180,7 +180,7 @@ public class Almacenamiento extends javax.swing.JFrame {
             }
         });
 
-        jBtnAgragar.setText("Agregar");
+        jBtnAgragar.setText("Ver");
         jBtnAgragar.setEnabled(false);
         jBtnAgragar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,10 +311,14 @@ public class Almacenamiento extends javax.swing.JFrame {
 
     private void jBtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGuardarActionPerformed
         guardarArchivo();
+        limpiarTabla();
+        mostrarArchivo();
     }//GEN-LAST:event_jBtnGuardarActionPerformed
 
     private void jBtnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMostrarActionPerformed
+
         mostrarArchivo();
+        
     }//GEN-LAST:event_jBtnMostrarActionPerformed
 
     private void jBtnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimpiarActionPerformed
@@ -361,11 +365,11 @@ public class Almacenamiento extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        arrozPKG = 400;
-        legumbresPKG = 400;
-        frutasPKG = 400;
-        verdurasPKG = 400;
-        carnesFriasPKG = 400;
+        //arrozPKG = 400;
+        //legumbresPKG = 400;
+        //frutasPKG = 400;
+        //verdurasPKG = 400;
+        //carnesFriasPKG = 400;
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
