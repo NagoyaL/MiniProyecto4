@@ -97,6 +97,12 @@ public class Proveedores extends javax.swing.JFrame {
             }
         });
 
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -116,9 +122,9 @@ public class Proveedores extends javax.swing.JFrame {
                         .addComponent(jButton2)
                         .addGap(31, 31, 31)
                         .addComponent(jButton3)
-                        .addGap(29, 29, 29)
+                        .addGap(37, 37, 37)
                         .addComponent(jButton4)
-                        .addGap(34, 34, 34)
+                        .addGap(26, 26, 26)
                         .addComponent(jButton5)))
                 .addContainerGap(48, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -128,9 +134,9 @@ public class Proveedores extends javax.swing.JFrame {
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(64, 64, 64)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(74, 74, 74))
         );
@@ -196,29 +202,37 @@ public class Proveedores extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
     private void sumarUnArroz(){
          arrozPKG = arrozPKG + Integer.parseInt(jTextField5.getText());
-         JOptionPane.showMessageDialog(null, "Ha añadido"  + Integer.valueOf(jTextField5.getText()) + "PKG de Arroces"  , "Compra a proveedores", 1);
+         JOptionPane.showMessageDialog(null, "Ha añadido "  + Integer.valueOf(jTextField5.getText()) +  " PKG de Arroces"  , "Compra a proveedores", 1);
      }
     
-     private void sumarUnasLegumbres(){
+     private void sumarUnasLegumbres(){ 
          legumbresPKG = legumbresPKG + Integer.parseInt(jTextField1.getText());
+         JOptionPane.showMessageDialog(null, "Ha añadido "  + Integer.valueOf(jTextField1.getText()) +  " PKG de Legumbres"  , "Compra a proveedores", 1);
      }
      
      private void sumarUnasFrutas(){
          frutasPKG = frutasPKG + Integer.parseInt(jTextField3.getText());
+         JOptionPane.showMessageDialog(null, "Ha añadido "  + Integer.valueOf(jTextField3.getText()) +  " PKG de Frutas"  , "Compra a proveedores", 1);
      }
      
      private void sumarUnasVerduras(){
          verdurasPKG = verdurasPKG + Integer.parseInt(jTextField2.getText());
+         JOptionPane.showMessageDialog(null, "Ha añadido "  + Integer.valueOf(jTextField2.getText()) +  " PKG de Verduras"  , "Compra a proveedores", 1);
      }
      
      private void sumarUnasCarnesFrias(){
          carnesFriasPKG = carnesFriasPKG + Integer.parseInt(jTextField4.getText());
+         JOptionPane.showMessageDialog(null, "Ha añadido "  + Integer.valueOf(jTextField4.getText()) +  " PKG de Carnes frias"  , "Compra a proveedores", 1);
      }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
